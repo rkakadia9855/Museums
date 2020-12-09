@@ -43,10 +43,10 @@
         android:layout_marginStart="66dp"
         android:layout_marginTop="436dp"
         android:layout_marginEnd="265dp"
-        android:layout_marginBottom="253dp"
+        android:layout_marginBottom="16dp"
         android:text="TextView"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -58,29 +58,30 @@
         android:layout_marginStart="66dp"
         android:layout_marginTop="381dp"
         android:layout_marginEnd="265dp"
-        android:layout_marginBottom="308dp"
         android:text="TextView"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/studentTicket"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/adultTicket"
         android:layout_width="80dp"
         android:layout_height="42dp"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="322dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="265dp"
-        android:layout_marginBottom="367dp"
+        android:layout_marginBottom="16dp"
         android:text="TextView"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/seniorTicket"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/museumImage"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

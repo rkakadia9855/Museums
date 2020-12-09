@@ -22,9 +22,9 @@ public class Activity2 extends AppCompatActivity {
     double seniorPriceValue = 0.0;
     double studentPriceValue = 0.0;
     private Toolbar toolbar;
-    int numAdults = 0;
-    int numSeniors = 0;
-    int numStudents = 0;
+    int numAdults = 2;
+    int numSeniors = 2;
+    int numStudents = 2;
     double ticketTotal = 0.0;
     double salesTax = 0.0;
     double totalAmount = 0.0;
@@ -55,9 +55,9 @@ public class Activity2 extends AppCompatActivity {
                         + (numStudents * studentPriceValue);
                 salesTax = salesTax * 0.08875;
                 totalAmount = ticketTotal + salesTax;
-                displaySalesTax.setText(""+salesTax);
-                displayTicketTotal.setText(""+ticketTotal);
-                displayTotalAmount.setText(""+totalAmount);
+                displaySalesTax.setText(String.valueOf(salesTax));
+                displayTicketTotal.setText(String.valueOf(ticketTotal));
+                displayTotalAmount.setText(String.valueOf(totalAmount));
             }
         });
 
