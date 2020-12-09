@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = (ListView)findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
 
         ArrayList<String> list = new ArrayList<>();
 
@@ -43,9 +44,19 @@ public class MainActivity extends AppCompatActivity {
         list.add("American Museum of Natural History");
         list.add("Whitney Museum of American Art");
 
-        ArrayAdapter arr = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
+        ArrayAdapter arr = new ArrayAdapter(this, android.R.layout.simple_list_item_1, list);
 
         listView.setAdapter(arr);
-    }
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-}
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+                                    long arg3) {
+                String selectedMuseum = list.get(arg2);
+                Intent intent = new Intent(MainActivity.this,  Activity2.class);
+                intent.putExtra("Listviewclickvalue", selectedMuseum);
+                startActivity(intent);
+            }
+        });
+    }
+    }
