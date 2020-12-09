@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> list = new ArrayList<>();
 
-        list.add("The New York Hall of Science");
-        list.add("Museum of Modern Art");
-        list.add("Intrepid Sea, Air, and Space Museum");
+        list.add("The Museum of Modern Art");
+        list.add("Rubin Museum of Art");
+        list.add("American Museum of Natural History");
         list.add("Whitney Museum of American Art");
 
         ArrayAdapter arr = new ArrayAdapter(this, android.R.layout.simple_list_item_1,list);
