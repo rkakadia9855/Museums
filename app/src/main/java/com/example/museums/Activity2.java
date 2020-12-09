@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Activity2 extends AppCompatActivity {
@@ -15,11 +17,20 @@ public class Activity2 extends AppCompatActivity {
     String adultPrice = "";
     String seniorPrice = "";
     String studentPrice = "";
+    Button calculator;
     double adultPriceValue = 0.0;
     double seniorPriceValue = 0.0;
     double studentPriceValue = 0.0;
     private Toolbar toolbar;
-
+    int numAdults = 0;
+    int numSeniors = 0;
+    int numStudents = 0;
+    double ticketTotal = 0.0;
+    double salesTax = 0.0;
+    double totalAmount = 0.0;
+    TextView displayTicketTotal;
+    TextView displaySalesTax;
+    TextView displayTotalAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +40,26 @@ public class Activity2 extends AppCompatActivity {
         adultTickets=findViewById(R.id.adultTicket);
         seniorTickets=findViewById(R.id.seniorTicket);
         studentTickets=findViewById(R.id.studentTicket);
+        displaySalesTax=findViewById(R.id.salesValue);
+        displayTicketTotal=findViewById(R.id.ticketValue);
+        displayTotalAmount=findViewById(R.id.totalValue);
+        calculator=findViewById(R.id.Calculate);
         title = (TextView) findViewById(R.id.secondTitle);
         String selectedMuseum = getIntent().getStringExtra("Listviewclickvalue");
         title.setText(selectedMuseum);
+
+        calculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ticketTotal = (numAdults * adultPriceValue) + (numSeniors * seniorPriceValue)
+                        + (numStudents * studentPriceValue);
+                salesTax = salesTax * 0.08875;
+                totalAmount = ticketTotal + salesTax;
+                displaySalesTax.setText(""+salesTax);
+                displayTicketTotal.setText(""+ticketTotal);
+                displayTotalAmount.setText(""+totalAmount);
+            }
+        });
 
         if(selectedMuseum.equals("The Museum of Modern Art")) {
             adultPrice = "adult $25.00";
