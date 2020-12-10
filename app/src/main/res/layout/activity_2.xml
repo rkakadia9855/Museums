@@ -20,8 +20,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/museumImage"
+    <ImageButton
+        android:id="@+id/image"
         android:layout_width="281dp"
         android:layout_height="166dp"
         android:layout_marginStart="34dp"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.473"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/moma" />
 
     <TextView
         android:id="@+id/studentTicket"
@@ -79,9 +79,9 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/seniorTicket"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/museumImage"
+        app:layout_constraintTop_toBottomOf="@+id/image"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -172,4 +172,42 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.946" />
 
+
+    <Spinner
+        android:id="@+id/adultSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:entries="@array/amountOfTickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <Spinner
+        android:id="@+id/seniorSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/amountOfTickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <Spinner
+        android:id="@+id/studentSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/amountOfTickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.618" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
