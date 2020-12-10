@@ -1,3 +1,8 @@
+/**
+ This class represents the 2nd activity for the app
+ @author John Juarez, Rudra Kakadia
+
+ */
 package com.example.museums;
 
 import android.os.Bundle;
@@ -51,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setAdapter(arr);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+            /**
+             This method opens up the 2nd activity when item is clicked
+             */
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
@@ -62,4 +69,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    }
+}
+
